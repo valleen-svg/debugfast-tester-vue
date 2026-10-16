@@ -12,7 +12,7 @@ if (!apiKey) {
 
 DebugFast.init({
   apiKey,
-  apiEndpoint: 'https://debugfastingestion-staging.up.railway.app/v1/events',
+  apiEndpoint: 'https://ingestion.debugfa.st/v1/events',
   captureScreenshot: true,
   captureConsole: true,
   captureNetwork: true,
