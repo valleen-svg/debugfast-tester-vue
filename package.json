@@ -9,7 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "debugfast-js": "^1.0.3",
+    "debugfast-js": "^1.1.0",
     "vue": "^3.4.0"
   },
   "devDependencies": {

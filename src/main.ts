@@ -1,5 +1,4 @@
-import { createApp } from 'vue';
-import DebugFast from 'debugfast-js';
+import { createApp, reactive } from 'vue';import DebugFast from 'debugfast-js';
 import { debugfastPlugin } from 'debugfast-js/vue';
 import App from './App.vue';
 import './style.css';
@@ -24,6 +23,10 @@ DebugFast.init({
     return report;
   },
 });
+
+// Demo store: attached to every report via the state capture API
+const settings = reactive({ theme: 'dark', locale: 'fr', apiKey: 'demo-secret' });
+DebugFast.registerStore('settings', () => settings, 'custom');
 
 // Set user info
 DebugFast.setUser({
