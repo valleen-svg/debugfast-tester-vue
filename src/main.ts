@@ -3,6 +3,8 @@ import { debugfastPlugin } from 'debugfast-js/vue';
 import App from './App.vue';
 import './style.css';
 
+declare const __RELEASE__: string;
+
 // Initialize DebugFast
 const apiKey = import.meta.env.DEBUGFAST_API_KEY;
 if (!apiKey) {
@@ -18,6 +20,7 @@ DebugFast.init({
   captureDom: true,
   captureUserActions: true,
   debug: true,
+  release: __RELEASE__,
   beforeSend: (report) => {
     console.log('DebugFast Report:', report);
     return report;

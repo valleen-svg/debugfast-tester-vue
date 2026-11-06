@@ -1,7 +1,7 @@
 {
   "name": "debugfast-test-app-vue",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -9,7 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "debugfast-js": "^1.1.0",
+    "debugfast-js": "^1.2.0",
     "vue": "^3.4.0"
   },
   "devDependencies": {

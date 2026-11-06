@@ -1,0 +1,4 @@
+{
+  "buildCommand": "npm run build && ./scripts/upload-sourcemaps.sh",
+  "outputDirectory": "dist"
+}
