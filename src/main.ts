@@ -4,6 +4,7 @@ import App from './App.vue';
 import './style.css';
 
 declare const __RELEASE__: string;
+console.log('DebugFast SDK Version:', __RELEASE__);
 
 // Initialize DebugFast
 const apiKey = import.meta.env.DEBUGFAST_API_KEY;
