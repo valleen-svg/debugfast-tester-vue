@@ -21,7 +21,11 @@ const triggerUnhandledRejection = () => {
 
 const triggerManualCapture = () => {
   try {
-    JSON.parse('invalid json {{{');
+    const input = 'invalid json {{{';
+    if (!/^[\s]*[{\[]/.test(input)) {
+      throw new SyntaxError(`Input does not appear to be valid JSON: "${input}"`);
+    }
+    JSON.parse(input);
   } catch (error) {
     DebugFast.captureError(error as Error, {
       extra: { context: 'Parsing user input in Vue' },
